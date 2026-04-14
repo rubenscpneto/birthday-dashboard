@@ -18,12 +18,13 @@ const getInitials = (name, surname) => {
 // Mock data generator
 const generateMockEmployees = () => {
   const today = getTodayFormatted();
-  
+
   return [
     {
       id: 1,
       name: 'Rubens',
       surname: '',
+      photo: '',
       birthday: '09-23',
       department: 'Software',
     },
@@ -110,6 +111,46 @@ const generateMockEmployees = () => {
       surname: '',
       birthday: '08-27',
       department: 'Infra',
+    },
+    {
+      id: 14,
+      name: 'João Pedro',
+      surname: '',
+      photo: '',
+      birthday: '05-14',
+      department: 'Infra',
+    },
+    {
+      id: 15,
+      name: 'Cássio',
+      surname: '',
+      photo: '',
+      birthday: '12-04',
+      department: 'Analista',
+    },
+    {
+      id: 16,
+      name: 'Alexandre',
+      surname: '',
+      photo: '',
+      birthday: '05-13',
+      department: 'Analista',
+    },
+    {
+      id: 17,
+      name: 'Lucas',
+      surname: '',
+      photo: '',
+      birthday: '03-14',
+      department: 'Infra',
+    },
+    {
+      id: 18,
+      name: 'Rian',
+      surname: '',
+      photo: '',
+      birthday: '01-06',
+      department: 'Infra',
     }
   ];
 };
@@ -130,11 +171,11 @@ const BirthdayDashboard = () => {
       const sortedByNext = [...data].sort((a, b) => {
         const aIsNextYear = a.birthday < todayStr;
         const bIsNextYear = b.birthday < todayStr;
-        
+
         if (aIsNextYear !== bIsNextYear) {
           return aIsNextYear ? 1 : -1;
         }
-        
+
         return a.birthday.localeCompare(b.birthday);
       });
 
@@ -216,7 +257,7 @@ const BirthdayDashboard = () => {
             </div>
             <div>
               <h1 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 to-purple-300">
-                Mural de Aniversariantes
+                Mural de Aniversariantes - EGOV
               </h1>
             </div>
           </div>
@@ -299,8 +340,8 @@ const BirthdayDashboard = () => {
                   <div
                     key={emp.id}
                     className={`flex items-center gap-5 p-5 rounded-2xl transition-all duration-300 ${isToday
-                        ? 'bg-gradient-to-r from-indigo-900/60 to-purple-900/60 border border-indigo-500/50 shadow-[0_0_20px_-5px_rgba(99,102,241,0.4)] transform scale-[1.02]'
-                        : 'bg-slate-800/40 border border-slate-700/30 hover:bg-slate-800/80 hover:border-slate-600/50'
+                      ? 'bg-gradient-to-r from-indigo-900/60 to-purple-900/60 border border-indigo-500/50 shadow-[0_0_20px_-5px_rgba(99,102,241,0.4)] transform scale-[1.02]'
+                      : 'bg-slate-800/40 border border-slate-700/30 hover:bg-slate-800/80 hover:border-slate-600/50'
                       }`}
                   >
                     <div className="relative">
