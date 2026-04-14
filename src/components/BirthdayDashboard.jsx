@@ -167,6 +167,7 @@ const BirthdayDashboard = () => {
   const [employees, setEmployees] = useState([]);
   const [birthdayPeeps, setBirthdayPeeps] = useState([]);
   const [currentCelebration, setCurrentCelebration] = useState(null);
+  const [currentDate, setCurrentDate] = useState(new Date());
 
   useEffect(() => {
     // Simulate API fetch
@@ -189,18 +190,34 @@ const BirthdayDashboard = () => {
 
       setEmployees(sortedByNext);
 
-      const today = getTodayFormatted();
-      const todaysBirthdays = data.filter(emp => emp.birthday === today);
+      const todaysBirthdays = data.filter(emp => emp.birthday === todayStr);
 
       setBirthdayPeeps(todaysBirthdays);
 
       if (todaysBirthdays.length > 0) {
         // If there are multiple, cycle through them. For now, pick the first.
         setCurrentCelebration(todaysBirthdays[0]);
+      } else {
+        setCurrentCelebration(null);
       }
     };
 
     fetchData();
+
+    // Verificação contínua: a cada 1 minuto checa se o dia mudou.
+    // Assim, à meia-noite a página é atualizada para o dia seguinte sem precisar recarregar (F5).
+    const intervalId = setInterval(() => {
+      setCurrentDate((prevDate) => {
+        const now = new Date();
+        // Se mudou de dia, atualiza a lista e aniversariantes de hoje
+        if (now.getDate() !== prevDate.getDate()) {
+          fetchData();
+        }
+        return now;
+      });
+    }, 1000 * 60);
+
+    return () => clearInterval(intervalId);
   }, []);
 
   // Continuous Confetti effect when there's a celebration
@@ -272,7 +289,7 @@ const BirthdayDashboard = () => {
 
           <div className="flex flex-col items-end">
             <span className="text-xl text-indigo-300 font-medium tracking-widest uppercase">
-              {new Date().toLocaleDateString('pt-BR', { weekday: 'long', day: 'numeric', month: 'long' })}
+              {currentDate.toLocaleDateString('pt-BR', { weekday: 'long', day: 'numeric', month: 'long' })}
             </span>
           </div>
         </header>
