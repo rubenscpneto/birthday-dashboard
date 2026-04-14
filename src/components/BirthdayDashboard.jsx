@@ -151,6 +151,14 @@ const generateMockEmployees = () => {
       photo: '',
       birthday: '01-06',
       department: 'Infra',
+    },
+    {
+      id: 19,
+      name: 'Samurai',
+      surname: '',
+      photo: '',
+      birthday: '07-14',
+      department: 'Infra',
     }
   ];
 };
