@@ -22,7 +22,7 @@ const getInitials = (name, surname) => {
 const generateMockEmployees = () => {
   return [
     { id: 1, name: 'Rubens', surname: '', photo: '', birthday: '09-23', department: 'Software' },
-    { id: 2, name: 'Guilherme', surname: 'Vieira', birthday: '04-15', department: 'Software' },
+    { id: 2, name: 'Guilherme', surname: 'Vieira', birthday: '04-09', department: 'Software' },
     { id: 3, name: 'Geninho', surname: '', birthday: '02-26', department: 'Software' },
     { id: 4, name: 'Alex', surname: '', birthday: '01-04', department: 'Software' },
     { id: 5, name: 'Isabella', surname: '', birthday: '11-30', department: 'Software' },
