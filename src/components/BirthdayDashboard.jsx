@@ -21,14 +21,14 @@ const getInitials = (name, surname) => {
 // Mock data generator
 const generateMockEmployees = () => {
   return [
-    { id: 1, name: 'Rubens', surname: '', photo: '', birthday: '09-23', department: 'Software' },
-    { id: 2, name: 'Guilherme', surname: 'Vieira', birthday: '04-09', department: 'Software' },
+    { id: 1, name: 'Rubens', surname: '', photo: 'images/rubens.jpeg', birthday: '09-23', department: 'Software' },
+    { id: 2, name: 'Guilherme', surname: 'Vieira', photo: 'images/guiVieira.png', birthday: '04-09', department: 'Software' },
     { id: 3, name: 'Geninho', surname: '', birthday: '02-26', department: 'Software' },
     { id: 4, name: 'Alex', surname: '', birthday: '01-04', department: 'Software' },
     { id: 5, name: 'Isabella', surname: '', birthday: '11-30', department: 'Software' },
     { id: 6, name: 'Fábio', surname: '', birthday: '01-08', department: 'Software' },
-    { id: 7, name: 'Pedro', surname: 'Freitas', birthday: '04-10', department: 'Software' },
-    { id: 8, name: 'Deison', surname: '', birthday: '04-06', department: 'Infra' },
+    { id: 7, name: 'Pedro', surname: 'Freitas', photo: 'images/pedroFreitas.png', birthday: '04-10', department: 'Software' },
+    { id: 8, name: 'Deison', surname: '', photo: 'images/deison.png', birthday: '04-06', department: 'Infra' },
     { id: 9, name: 'Matheus', surname: 'Henrique', birthday: '01-20', department: 'Infra' },
     { id: 10, name: 'Pedro', surname: 'Guimarães', birthday: '09-09', department: 'Infra' },
     { id: 11, name: 'Matheus', surname: 'Martins', birthday: '11-22', department: 'Infra' },
