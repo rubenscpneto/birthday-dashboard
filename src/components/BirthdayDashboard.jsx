@@ -247,11 +247,11 @@ const BirthdayDashboard = () => {
                         <img
                           src={emp.photo}
                           alt={emp.name}
-                          className={`w-28 h-28 rounded-full object-cover border-4 transition-colors duration-300 ${isToday ? 'border-pmf-cyan shadow-[0_0_15px_rgba(0,177,235,0.3)]' : 'border-pmf-navy/20 group-hover:border-pmf-cyan/50'
+                          className={`w-48 h-48 rounded-full object-cover border-4 transition-colors duration-300 ${isToday ? 'border-pmf-cyan shadow-[0_0_15px_rgba(0,177,235,0.3)]' : 'border-pmf-navy/20 group-hover:border-pmf-cyan/50'
                             }`}
                         />
                       ) : (
-                        <div className={`w-28 h-28 flex items-center justify-center rounded-full border-4 font-bold text-4xl transition-colors duration-300 ${isToday
+                        <div className={`w-48 h-48 flex items-center justify-center rounded-full border-4 font-bold text-4xl transition-colors duration-300 ${isToday
                           ? 'border-pmf-cyan bg-pmf-cyan/15 text-pmf-navy shadow-[0_0_15px_rgba(0,177,235,0.3)]'
                           : 'border-pmf-navy/20 bg-pmf-light-surface text-pmf-navy group-hover:border-pmf-cyan/50'
                           }`}>
