@@ -45,7 +45,7 @@ const generateMockData = () => {
 
   // Events
   data.push(
-    { id: 'e1', type: 'event', title: 'Futebol', date: '09-16' },
+    { id: 'e1', type: 'event', title: 'Choripan grátis no bar do Fábio', date: '06-16' },
     { id: 'e2', type: 'event', title: 'Palestra', date: '09-29' }
   );
 
