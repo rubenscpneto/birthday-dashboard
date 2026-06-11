@@ -241,6 +241,7 @@ const BirthdayDashboard = () => {
             (() => {
               const totalItems = monthBirthdays.length + (monthEvents.length > 0 ? 1 : 0);
               const isDense = totalItems > 4;
+              const eventsOnly = monthBirthdays.length === 0 && monthEvents.length > 0;
 
               let avatarSizeClass = "w-48 h-48 text-4xl";
               let cardPaddingClass = "p-8 px-6";
@@ -346,7 +347,7 @@ const BirthdayDashboard = () => {
 
                   {/* Eventos Card */}
                   {monthEvents.length > 0 && (
-                    <div className={`relative ${cardPaddingClass} rounded-2xl flex flex-col transition-all duration-300 overflow-hidden bg-white border border-pmf-navy/10 hover:shadow-md col-span-1 h-full min-h-[200px]`}>
+                    <div className={`relative ${cardPaddingClass} rounded-2xl flex flex-col transition-all duration-300 bg-white border border-pmf-navy/10 hover:shadow-md ${eventsOnly ? 'col-span-full max-w-4xl mx-auto w-full' : 'col-span-1'} h-full min-h-[200px]`}>
                       <div className={`absolute top-0 right-0 rounded-bl-2xl ${tagPaddingClass} font-black tracking-wider bg-pmf-navy text-white shadow-md z-10 flex items-center gap-1 md:gap-2`}>
                         <Calendar size={tagIconSize} />
                         <span className={isDense && totalItems > 6 ? "hidden xl:inline" : ""}>Eventos</span>
@@ -357,8 +358,8 @@ const BirthdayDashboard = () => {
                             const isToday = evt.date === getTodayFormatted();
                             const day = parseInt(evt.date.split('-')[1]);
                             return (
-                              <li key={evt.id} className={`flex items-center justify-between ${evtPaddingClass} rounded-xl border transition-all ${isToday ? 'bg-pmf-cyan/20 border-pmf-cyan/50 text-pmf-navy shadow-sm' : 'bg-pmf-light-surface border-pmf-navy/10 text-pmf-navy/80 hover:bg-white hover:border-pmf-cyan/30'}`}>
-                                <span className={`font-bold ${isToday ? 'text-pmf-navy' : 'text-pmf-navy/80'} ${evtTitleClass} truncate mr-2`}>{evt.title}</span>
+                              <li key={evt.id} className={`flex flex-wrap items-start justify-between gap-x-3 gap-y-1 ${evtPaddingClass} rounded-xl border transition-all ${isToday ? 'bg-pmf-cyan/20 border-pmf-cyan/50 text-pmf-navy shadow-sm' : 'bg-pmf-light-surface border-pmf-navy/10 text-pmf-navy/80 hover:bg-white hover:border-pmf-cyan/30'}`}>
+                                <span className={`font-bold ${isToday ? 'text-pmf-navy' : 'text-pmf-navy/80'} ${evtTitleClass} break-words min-w-0 flex-1`}>{evt.title}</span>
                                 <span className={`text-xs md:text-sm font-black whitespace-nowrap ${isToday ? 'text-pmf-cyan-dark' : 'text-pmf-navy/40'}`}>Dia {day}</span>
                               </li>
                             );
