@@ -22,33 +22,29 @@ const getInitials = (name, surname) => {
 const generateMockData = () => {
   const data = [
     { id: 1, name: 'Rubens', surname: '', photo: 'images/rubens.jpeg', birthday: '09-23', department: 'Software' },
-    { id: 2, name: 'Guilherme', surname: 'Vieira', photo: 'images/guiVieira.png', birthday: '04-09', department: 'Software' },
     { id: 3, name: 'Geninho', surname: '', birthday: '02-26', department: 'Software' },
     { id: 4, name: 'Alex', surname: '', birthday: '01-04', department: 'Software' },
-    { id: 5, name: 'Isabella', surname: '', birthday: '11-30', department: 'Software' },
     { id: 6, name: 'Fábio', surname: '', birthday: '01-08', department: 'Diretor de Software' },
     { id: 7, name: 'Pedro', surname: 'Farias', photo: 'images/pedroFreitas.png', birthday: '04-10', department: 'Software' },
     { id: 8, name: 'Deison', surname: '', photo: 'images/deison.png', birthday: '04-06', department: 'Subsecretário' },
     { id: 9, name: 'Matheus', surname: 'Henrique', birthday: '01-20', department: 'Infra' },
-    { id: 10, name: 'Pedro', surname: 'Guimarães', birthday: '09-09', department: 'Infra' },
     { id: 11, name: 'Matheus', surname: 'Martins', birthday: '11-22', department: 'Infra' },
     { id: 12, name: 'Gui', surname: 'Souza', birthday: '02-10', department: 'Gerente de Infra' },
-    { id: 13, name: 'Márcio', surname: '', birthday: '08-27', department: 'Infra' },
     { id: 14, name: 'João Pedro', surname: '', photo: 'images/joaoPedro.png', birthday: '05-14', department: 'Infra' },
     { id: 15, name: 'Cássio', surname: '', photo: '', birthday: '12-04', department: 'Analista' },
     { id: 16, name: 'Alexandre', surname: '', photo: 'images/alexandre.png', birthday: '05-13', department: 'Analista' },
     { id: 17, name: 'Lucas', surname: '', photo: '', birthday: '03-14', department: 'Infra' },
-    { id: 18, name: 'Rian', surname: '', photo: '', birthday: '01-06', department: 'Infra' },
     { id: 19, name: 'Samurai', surname: '', photo: 'images/samurai.jpeg', birthday: '07-14', department: 'Infra' },
     { id: 20, name: 'Sidnei', surname: '', photo: '', birthday: '02-13', department: 'Diretor de Infra' },
     { id: 21, name: 'Maria Vitória', surname: '', photo: '', birthday: '09-06', department: 'Software' },
     { id: 22, name: 'Paulo', surname: '', photo: '', birthday: '06-06', department: 'Software' },
+    { id: 23, name: 'Raíssa', surname: '', photo: '', birthday: '10-13', department: 'Software' },
+    { id: 24, name: 'Estevam', surname: '', photo: '', birthday: '09-12', department: 'Infra' },
   ].map(emp => ({ ...emp, type: 'birthday', date: emp.birthday }));
 
   // Events
   data.push(
     { id: 'e1', type: 'event', title: 'Choripan grátis no bar do Fábio', date: '06-16' },
-    { id: 'e2', type: 'event', title: 'Palestra', date: '09-29' }
   );
 
   return data;
