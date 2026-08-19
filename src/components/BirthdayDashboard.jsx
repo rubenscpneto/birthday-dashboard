@@ -40,6 +40,9 @@ const generateMockData = () => {
     { id: 22, name: 'Paulo', surname: '', photo: '', birthday: '06-06', department: 'Software' },
     { id: 23, name: 'Raíssa', surname: '', photo: '', birthday: '10-13', department: 'Software' },
     { id: 24, name: 'Estevam', surname: '', photo: '', birthday: '09-12', department: 'Infra' },
+    { id: 25, name: 'Leandro', surname: '', photo: '', birthday: '05-12', department: 'Software' },
+    { id: 26, name: 'Eduardo', surname: '', photo: '', birthday: '11-20', department: 'Software' },
+    { id: 27, name: 'Bernardo', surname: '', photo: '', birthday: '09-20', department: 'Infra' },
   ].map(emp => ({ ...emp, type: 'birthday', date: emp.birthday }));
 
   // Events
