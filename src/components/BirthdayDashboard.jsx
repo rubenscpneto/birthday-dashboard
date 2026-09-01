@@ -36,7 +36,7 @@ const generateMockData = () => {
     { id: 17, name: 'Lucas', surname: '', photo: '', birthday: '03-14', department: 'Infra' },
     { id: 19, name: 'Samurai', surname: '', photo: 'images/samurai.jpeg', birthday: '07-14', department: 'Infra' },
     { id: 20, name: 'Sidnei', surname: '', photo: '', birthday: '02-13', department: 'Diretor de Infra' },
-    { id: 21, name: 'Maria Vitória', surname: '', photo: '', birthday: '09-06', department: 'Software' },
+    { id: 21, name: 'Maria Vitória', surname: '', photo: 'images/mavi.jpeg', birthday: '09-06', department: 'Software' },
     { id: 22, name: 'Paulo', surname: '', photo: '', birthday: '06-06', department: 'Software' },
     { id: 23, name: 'Raíssa', surname: '', photo: '', birthday: '10-13', department: 'Software' },
     { id: 24, name: 'Estevam', surname: '', photo: '', birthday: '09-12', department: 'Infra' },
